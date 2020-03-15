@@ -13,3 +13,7 @@ input {
 .rounded-form{
     border-radius: 8px;
 }
+
+.mh-420{
+    max-height: 500px;
+}

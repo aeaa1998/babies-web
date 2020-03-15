@@ -16,7 +16,7 @@ class Baby extends React.Component {
     render() {
         return (
 
-            <div className="jumbotron jumbotron-fluid vh-100">
+            <div className="jumbotron jumbotron-fluid vh-100 mb-0">
                 <div className="container">
                     <h1 className="display-4">Bebe: {this.props.selected.name} {this.props.selected.lastName}</h1>
                     <p className="lead">Aca vera las actividades de su bebe escogido.</p>
@@ -45,7 +45,7 @@ class Baby extends React.Component {
                         </div>
                     </div>
                     <div className="row mt-4">
-                        <div className="col-8">
+                        <div className="col-8 mh-420 overflow-auto">
                             <div className="row">
                                 {this.props.events.length == 0 ? <h1>Todavia no hay eventos</h1> :
                                     <div className="offset-1 col-10">
@@ -55,11 +55,14 @@ class Baby extends React.Component {
 
                             </div>
                         </div>
-                        <div className="col card">
-                            <div className="card-body">
-                                <h5 className="card-title">Agregar Evento</h5>
-                                <CreateEvent onSubmit={this.props.createEvent} />
+                        <div className="col">
+                            <div className="card">
+                                <div className="card-body">
+                                    <h5 className="card-title">Agregar Evento</h5>
+                                    <CreateEvent onSubmit={this.props.createEvent} />
+                                </div>
                             </div>
+
                         </div>
 
                     </div>
